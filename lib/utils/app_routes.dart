@@ -1,0 +1,27 @@
+import 'package:get/get.dart';
+import 'package:get/route_manager.dart';
+import 'package:newsity/views/home_page.dart';
+import 'package:newsity/views/signin_signup_screen.dart';
+import 'package:newsity/views/splash_screen.dart';
+
+class AppRoutes {
+  AppRoutes._();
+  static const initial = '/splashScreen';
+  static final routes = [
+    GetPage(
+      name: '/splashScreen',
+      page: () => const SplashScreen(),
+      transition: Transition.zoom,
+    ),
+    GetPage(
+      name: '/homePage',
+      page: () => HomePage(),
+      transition: Transition.fadeIn,
+    ),
+    GetPage(
+      name: '/signin_signup',
+      page: () => SignInSignUpScreen(),
+      transition: Transition.fadeIn,
+    ),
+  ];
+}
